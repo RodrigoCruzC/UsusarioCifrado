@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            alert ("Activa tu mayus");
+        
+            function validar(e){
+			var k=e.keyCode;
+			console.log(e.keyCode);
+
+			if(k>=48 && k<=57){
+				return true;
+			}
+                        if(k>=65 && k<=70){
+				return true;
+			}
+                       
+                        if(k>=1 && k<=31){
+				return true;
+			}
+			//if(k>=97 && k<=102){
+			//	return true;
+			//}
+			return false;
+		}
+            </script>
+            <Style>
+                .body
+                {
+                    text-transform: uppercase;
+                }
+            </style>
+    </head>
+    <body>
+        
+        <form method="Post" action="Sillas" name="regis"> 
+            
+            Usuario <input class="body" type="text" name="usur" id="usu" maxlength="16" minlength="16" required  onkeypress="return validar(event)" >
+            
+            Contraseña <input  type="text" name="con" id="pass" maxlength="16" minlength="16" onkeypress="return validar(event)">
+
+            <input type="submit" name="sub" id="sub" value="Registrar" >
+
+        </form>
+        
+      
+        
+    </body>
+</html>
